@@ -84,10 +84,14 @@ jobs:
       - name: Build image
         run: docker build -t shop-ingestor:ci .
 
-      # Not pinned to a SHA — same advisory-job tradeoff as golangci-lint
-      # above.
+      # Pinned to the commit for tag 0.35.0 specifically — CVE-2026-33634
+      # found every trivy-action tag before 0.35.0 compromised (credential-
+      # stealing malware force-pushed onto 76 of 77 version tags). 0.35.0
+      # predates the compromise and is protected by GitHub's immutable
+      # releases. SHA-pinned, not just version-pinned, per that advisory's
+      # own recommendation.
       - name: Scan image
-        uses: aquasecurity/trivy-action@0.24.0
+        uses: aquasecurity/trivy-action@57a97c7e7821a5776cebc9bb87c984fa69cba8f1 # 0.35.0
         with:
           image-ref: shop-ingestor:ci
           severity: CRITICAL,HIGH
