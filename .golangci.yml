@@ -1,0 +1,14 @@
+version: "2"
+linters:
+  enable:
+    - govet
+    - staticcheck
+    - unused
+    - errcheck
+    - gosec
+    - bodyclose
+  exclusions:
+    rules:
+      - path: _test\.go
+        linters:
+          - gosec

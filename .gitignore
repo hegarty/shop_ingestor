@@ -1,0 +1,26 @@
+# Build artifacts
+/bin/
+*.exe
+*.test
+*.out
+
+# Environment / local config — never commit real values
+.env
+.env.*
+*.local.yaml
+*.local.yml
+
+# Secrets — should never exist in this repo, but block them defensively
+*.pem
+*.key
+*_rsa
+*_ed25519
+!*.pub
+credentials.json
+*.tfstate
+*.tfstate.*
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
