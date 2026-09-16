@@ -8,7 +8,7 @@ require (
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.113.1
 	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.50.0
 	github.com/hegarty/shop_platform v0.0.0-20260916125442-dd4cc9f59fe9
-	github.com/jackc/pgx/v5 v5.9.2
+	github.com/jackc/pgx/v5 v5.11.0
 	github.com/twmb/franz-go v1.19.5
 )
 
