@@ -4,7 +4,7 @@
 # than building three separate images for three tiny Go binaries that share
 # 100% of their dependencies.
 
-FROM golang:1.24.13-bookworm AS build
+FROM golang:1.25.14-bookworm AS build
 WORKDIR /src
 
 COPY go.mod go.sum ./
