@@ -212,7 +212,7 @@ func (c *Client) do(ctx context.Context, query string, variables map[string]any,
 	if err != nil {
 		return fmt.Errorf("shopify: request failed: %w", err)
 	}
-	defer resp.Body.Close()
+	defer func() { _ = resp.Body.Close() }()
 
 	body, err := io.ReadAll(resp.Body)
 	if err != nil {
