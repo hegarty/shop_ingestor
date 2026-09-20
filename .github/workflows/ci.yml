@@ -53,7 +53,7 @@ jobs:
       # not a required status check, so a floating major-version tag here is
       # an accepted tradeoff rather than a control this repo depends on.
       - name: golangci-lint
-        uses: golangci/golangci-lint-action@v6
+        uses: golangci/golangci-lint-action@v9
         with:
           version: latest
 
