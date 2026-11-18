@@ -6,7 +6,7 @@ require (
 	github.com/aws/aws-sdk-go-v2 v1.48.0
 	github.com/aws/aws-sdk-go-v2/config v1.33.18
 	github.com/aws/aws-sdk-go-v2/service/s3 v1.114.3
-	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.50.1
+	github.com/aws/aws-sdk-go-v2/service/secretsmanager v1.51.0
 	github.com/hegarty/shop_platform v0.0.0-20260916125442-dd4cc9f59fe9
 	github.com/jackc/pgx/v5 v5.11.0
 	github.com/twmb/franz-go v1.22.3
